@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "functions": [
+            {
+               "add": false,
+               "count": {
+                 "type": "minecraft:uniform",
+                 "max": 3,
+                 "min": 0
+               },
+               "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+               "add": false,
+               "count": {
+                 "type": "minecraft:uniform",
+                 "max": 1,
+                 "min": 0
+               },
+               "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:diamond"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "treasuretree:blocks/coin_diamond"
+}

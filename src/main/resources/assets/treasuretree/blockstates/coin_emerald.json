@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "treasuretree:block/coin1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "treasuretree:block/coin1"
+    },
+    "facing=south": {
+      "model": "treasuretree:block/coin45_1"
+    },
+    "facing=west": {
+      "model": "treasuretree:block/coin45_1",
+      "y":90
+    }
+  }
+}

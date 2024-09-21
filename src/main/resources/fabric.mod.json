@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "treasure-tree",
+	"version": "${version}",
+	"name": "Treasure Tree",
+	"description": "Adds treasure trees!",
+	"authors": [
+		"BooppyTheSeal"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/treasure-tree/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.booppy.treasuretree.TreasureTree"
+		],
+		"fabric-datagen": [
+			"com.example.TreasureTreeDataGenerator"
+		],
+		"client":[
+			"com.booppy.treasuretree.TreasureTreeClient"
+		]
+	},
+	"mixins": [
+		"treasure-tree.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

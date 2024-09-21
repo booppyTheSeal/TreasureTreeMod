@@ -1,0 +1,17 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "treasuretree:block/coin1",
+		"particle": "minecraft:item/gold_ingot"
+	},
+	"elements": [
+		{
+			"from": [8, 0, 4],
+			"to": [8, 16, 12],
+			"faces": {
+				"east": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"west": {"uv": [8, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

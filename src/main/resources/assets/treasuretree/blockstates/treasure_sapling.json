@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "treasuretree:block/treasure_sapling"
+    }
+  }
+}
