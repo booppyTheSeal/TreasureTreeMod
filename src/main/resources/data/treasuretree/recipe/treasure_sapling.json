@@ -12,6 +12,9 @@
       "item": "minecraft:emerald_block"
     },
     {
+      "item": "minecraft:diamond_block"
+    },
+    {
       "item": "minecraft:red_wool"
     }
   ],

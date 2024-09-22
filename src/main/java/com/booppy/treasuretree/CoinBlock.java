@@ -1,5 +1,7 @@
 package com.booppy.treasuretree;
 
+import com.mojang.serialization.MapCodec;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -21,6 +23,8 @@ public class CoinBlock extends Block {
 
 	static final VoxelShape SHAPE = Block.createCuboidShape(3.0, 3.0, 3, 13.0, 13, 16);
 	
+	public static final MapCodec<CoinBlock> CODEC = createCodec(CoinBlock::new);
+	
 	public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 	
 	public CoinBlock(Settings settings) {
@@ -34,7 +38,8 @@ public class CoinBlock extends Block {
 	
 	@Override
 	protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-		return world.getBlockState(pos.up()).isSideSolid(world, pos, Direction.DOWN, SideShapeType.CENTER);
+		BlockState s=world.getBlockState(pos.up());
+		return s.isSideSolid(world, pos, Direction.DOWN, SideShapeType.CENTER)||s.getBlock() instanceof CoinBlock;
 	}
 	
 	@Override
@@ -60,5 +65,11 @@ public class CoinBlock extends Block {
 			if(world.isAir(neighborPos))return Blocks.AIR.getDefaultState();
 		}
 		return state;
+	}
+	
+
+	@Override
+	protected MapCodec<CoinBlock> getCodec() {
+		return CODEC;
 	}
 }

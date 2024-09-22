@@ -27,8 +27,8 @@ public class TreasureTreeDecorator extends TreeDecorator {
 	};
 	
 	static final Block[] coins=new Block[] {
-			TreasureTree.COIN_D,TreasureTree.COIN_E,TreasureTree.COIN_S
-			,TreasureTree.COIN,TreasureTree.COIN
+			TTBlocks.COIN_D,TTBlocks.COIN_E,TTBlocks.COIN_S
+			,TTBlocks.COIN,TTBlocks.COIN
 		};
 	
 	public TreasureTreeDecorator(float f) {
@@ -60,13 +60,13 @@ public class TreasureTreeDecorator extends TreeDecorator {
 			if(generator.isAir(pos.down(i))) {
 				Block b=Util.getRandom(coins, random);
 				generator.replace(pos.down(i), this.getCoin(b,random));
-				if(b!=TreasureTree.COIN)return;
+				if(b!=TTBlocks.COIN)return;
 			}else {
-				generator.replace(pos, this.getCoin(TreasureTree.COIN_S,random));
+				generator.replace(pos, this.getCoin(TTBlocks.COIN_S,random));
 				return;
 			}
 		}
-		generator.replace(pos.down(3), this.getCoin(TreasureTree.COIN_D,random));
+		generator.replace(pos.down(3), this.getCoin(TTBlocks.COIN_D,random));
 	}
 
 	private BlockState getCoin(Block coin, Random random) {

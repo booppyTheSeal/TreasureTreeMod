@@ -8,13 +8,13 @@ public class TreasureTreeClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.TREASURE_SAPLING, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.COIN, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.COIN_D, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.COIN_E, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.COIN_S, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.POTTED_TREASURE_SAPLING, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(TreasureTree.GOLDEN_LEAVES, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.TREASURE_SAPLING, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.COIN, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.COIN_D, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.COIN_E, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.COIN_S, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.POTTED_TREASURE_SAPLING, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(TTBlocks.GOLDEN_LEAVES, RenderLayer.getCutout());
 	}
 
 }
